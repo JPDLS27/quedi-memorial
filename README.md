@@ -24,6 +24,10 @@ Cada etapa do projeto, na ordem em que aconteceu:
 14. Resultado: o site do produto
 15. Instrumentos de pesquisa e referências
 
+## Documentos originais
+
+O briefing e o branding completos, em PDF, ficam em `assets/pdf/` e abrem pelos botões no topo do memorial.
+
 ## Como ver
 
 Abra o `index.html` no navegador, ou rode `npx serve .` na pasta. O site é estático (HTML, CSS e JavaScript), sem etapa de build. No Vercel, importe o repositório com o *Framework Preset* em **Other**.
