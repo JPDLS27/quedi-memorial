@@ -97,6 +97,24 @@
   }));
   $$('.guide, .card, .aff, .concept, .hl, .quotes blockquote, .phones figure, .sk').forEach(el => whenIn(el));
 
+  /* ---------- imagem ampliada (fecha com o botão, Esc ou clique fora) ---------- */
+  const lb = $('#lightbox'), lbImg = $('#lb-img'), lbCap = $('#lb-cap');
+  if (lb && typeof lb.showModal === 'function') {
+    document.addEventListener('click', e => {
+      const a = e.target.closest('a[href$=".jpg"]');
+      if (!a || e.metaKey || e.ctrlKey) return;
+      e.preventDefault();
+      const img = $('img', a), fig = a.closest('figure'), cap = fig && $('figcaption', fig);
+      lbImg.src = a.getAttribute('href');
+      lbImg.alt = img ? img.alt : '';
+      lbCap.textContent = cap ? cap.innerText.trim().replace(/\s*\n+\s*/g, ' — ') : '';
+      lb.showModal();
+    });
+    $('#lb-close').addEventListener('click', () => lb.close());
+    lb.addEventListener('click', e => { if (e.target === lb) lb.close(); });
+    lb.addEventListener('close', () => { lbImg.src = ''; });
+  }
+
   /* ---------- etapa atual no índice + barra de progresso ---------- */
   const links = $$('.toc a'), bar = $('.progress-bar');
   const steps = links.map(a => $(a.getAttribute('href')));

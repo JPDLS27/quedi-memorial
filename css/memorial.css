@@ -335,3 +335,16 @@ figcaption { font-size: .95rem; color: var(--ink-soft); margin-top: .5rem; }
 .pdf-box strong { display: block; font-size: 1.15rem; }
 .pdf-box-sol { background: var(--sol-soft); margin: 1.2rem 0 1.5rem; }
 .sketches img.is-wide { aspect-ratio: auto; object-fit: contain; }
+
+/* imagem ampliada */
+.lightbox { border: 0; padding: 0; background: transparent; max-width: 100vw; max-height: 100vh; width: 100vw; height: 100vh; margin: 0; overflow: hidden; }
+.lightbox::backdrop { background: rgba(43, 29, 18, .86); }
+.lightbox[open] { display: grid; place-items: center; animation: lb-in .2s var(--ease-out); }
+.lightbox figure { margin: 0; padding: 4.5rem 1rem 1rem; display: grid; gap: .6rem; justify-items: center; max-height: 100vh; pointer-events: none; }
+.lightbox img { max-width: min(1100px, 94vw); max-height: calc(100vh - 11rem); width: auto; height: auto; border-radius: 14px; background: #fff; pointer-events: auto; }
+.lightbox figcaption { color: #FFE3C7; text-align: center; max-width: 70ch; }
+.lb-close { position: fixed; top: 1rem; right: 1rem; z-index: 2; display: inline-flex; align-items: center; gap: .5rem; min-height: 48px; padding: .6rem 1.2rem; border: 0; border-radius: 999px; background: var(--sol); color: var(--ink); font: inherit; font-weight: 700; font-size: 1.05rem; cursor: pointer; transition: scale .16s var(--ease-out); }
+.lb-close:active { scale: .97; }
+.lb-close:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+@keyframes lb-in { from { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .lightbox[open] { animation: none; } }
