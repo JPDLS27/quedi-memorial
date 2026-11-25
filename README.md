@@ -20,8 +20,9 @@ Cada etapa do projeto, na ordem em que aconteceu:
 10. Painel de estilo de vida
 11. Diretrizes
 12. Geração de conceitos, com os rascunhos
-13. Resultado: o site do produto
-14. Instrumentos de pesquisa e referências
+13. Sketches do site
+14. Resultado: o site do produto
+15. Instrumentos de pesquisa e referências
 
 ## Como ver
 

@@ -95,7 +95,7 @@
     $('#' + b.getAttribute('aria-controls')).hidden = !open;
     b.closest('.guide').classList.toggle('is-open', open);
   }));
-  $$('.guide, .card, .aff, .concept, .hl, .quotes blockquote, .phones figure').forEach(el => whenIn(el));
+  $$('.guide, .card, .aff, .concept, .hl, .quotes blockquote, .phones figure, .sk').forEach(el => whenIn(el));
 
   /* ---------- etapa atual no índice + barra de progresso ---------- */
   const links = $$('.toc a'), bar = $('.progress-bar');
