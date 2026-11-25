@@ -5,7 +5,7 @@
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* Endereço do site do produto: troque aqui quando tiver o link do Vercel */
-  const PRODUTO_URL = 'https://github.com/JPDLS27/quedi-minhas-coisas';
+  const PRODUTO_URL = 'https://quedi-minhas-coisas.vercel.app/';
   $$('#link-produto, #link-produto-2').forEach(a => { a.href = PRODUTO_URL; });
 
   /* ---------- aparece quando entra na tela ---------- */
